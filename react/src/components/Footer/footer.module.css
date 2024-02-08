@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    height: 88px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
