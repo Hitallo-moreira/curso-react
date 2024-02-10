@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './headerLink.module.css';
+import styles from './HeaderLink.module.css';
 
 function HeaderLink({url, children}) {
     return (
