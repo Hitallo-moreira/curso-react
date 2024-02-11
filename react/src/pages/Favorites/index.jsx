@@ -1,18 +1,17 @@
-
+import styles from './Favorites.module.css';
 import Banner from "../../components/Banner";
+import bannerImage from "../../assets/banner-favoritos.png"
 import Title from "../../components/Title";
-import bannerImage from "../../assets/banner-home.png"
 import Card from "../../components/Card";
 import videos from "../../json/db.json";
-import styles from "./home.module.css";
 
-function Home() {
+function Favorites() {
     return (
         <>
-           <Banner image={bannerImage} />
-           <Title>
-                <h1>Um lugar para guardar seus vídeos e filmes!</h1>
-           </Title>
+            <Banner image={bannerImage} />
+            <Title>
+                <h1>Meus Favoritos</h1>
+            </Title>
             <section className={styles.container}>
                 {videos.map((video) => {
                     return <Card {...video} key={video.id} />
@@ -22,4 +21,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Favorites;
