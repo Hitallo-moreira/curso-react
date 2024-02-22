@@ -4,8 +4,11 @@ import bannerImage from "../../assets/banner-favoritos.png"
 import Title from "../../components/Title";
 import Card from "../../components/Card";
 import videos from "../../json/db.json";
+import { useFavoriteContext } from '../../context/Favorites';
 
 function Favorites() {
+    const { favorites } = useFavoriteContext();
+
     return (
         <>
             <Banner image={bannerImage} />
@@ -13,8 +16,8 @@ function Favorites() {
                 <h1>Meus Favoritos</h1>
             </Title>
             <section className={styles.container}>
-                {videos.map((video) => {
-                    return <Card {...video} key={video.id} />
+                {favorites.map((fav) => {
+                    return <Card {...fav} key={fav.id} />
                 })}
             </section>
         </>

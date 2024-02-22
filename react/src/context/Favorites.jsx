@@ -15,24 +15,24 @@ export default function FavoritesProvider({ children }) {
 }
 
 export function useFavoriteContext() {
-    const {favorite, setFavorite } = useContext(FavoritesContext);
-
+    const {favorites, setFavorites } = useContext(FavoritesContext);
+    
     function addFavorite(newFavorite) {
-        const repeatFavorite = favorite.some(item => item.id === newFavorite.id);
+        const repeatFavorite = favorites.some(item => item.id === newFavorite.id);
 
-        let newList = [...favorite];
+        let newList = [...favorites];
 
         if(!repeatFavorite) {
             newList.push(newFavorite);
-            return setFavorite(newList);
+            return setFavorites(newList);
         }
 
-        novaLista = favorito.filter((fav) => fav.id !== novoFavorito.id);
-        return setFavorite(newList);
+        newList = favorites.filter((fav) => fav.id !== newFavorite.id);
+        return setFavorites(newList);
     }
 
     return {
-        favorite,
+        favorites,
         addFavorite
     }
 }
