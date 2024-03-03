@@ -3,7 +3,6 @@ import Banner from "../../components/Banner";
 import bannerImage from "../../assets/banner-favoritos.png"
 import Title from "../../components/Title";
 import Card from "../../components/Card";
-import videos from "../../json/db.json";
 import { useFavoriteContext } from '../../context/Favorites';
 
 function Favorites() {
